@@ -1,0 +1,175 @@
+:root {
+  /* Indian Palette */
+  --color-saffron: #FF9933;
+  --color-saffron-dark: #cc7a29;
+  --color-turmeric: #FFC300;
+  --color-turmeric-light: #FFD700;
+  --color-earth: #8B4513;
+  --color-earth-light: #A0522D;
+  --color-indigo: #4B0082;
+  --color-green: #138808;
+  /* India Green */
+  --color-cream: #FFFDD0;
+  --color-paper: #F5F5DC;
+
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --shadow-card: 0 4px 8px rgba(139, 69, 19, 0.2);
+  --border-hand: 2px solid var(--color-earth);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-paper);
+  color: var(--color-earth);
+  background-image: url('/bg-market.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: normal;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: var(--color-indigo);
+  /* Removed text-transform: uppercase to support Telugu, Tamil, and other non-Latin scripts */
+  letter-spacing: 1px;
+}
+
+/* Component: Artistic Card */
+.artistic-card {
+  background: var(--color-cream);
+  border: var(--border-hand);
+  border-radius: 12px 4px 12px 4px;
+  /* Slightly irregular */
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.artistic-card:active {
+  transform: scale(0.98);
+}
+
+.artistic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--color-saffron), var(--color-turmeric), var(--color-green));
+}
+
+/* Component: Paint Button */
+.btn-paint {
+  background: var(--color-saffron);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px 5px 25px 5px;
+  /* Leaf shape */
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--color-saffron-dark);
+  transition: all 0.1s;
+}
+
+.btn-paint:active {
+  box-shadow: 0 2px 0 var(--color-saffron-dark);
+  transform: translateY(2px);
+}
+
+.btn-paint.secondary {
+  background: var(--color-indigo);
+  box-shadow: 0 4px 0 #2a004a;
+}
+
+.btn-paint.secondary:active {
+  box-shadow: 0 2px 0 #2a004a;
+}
+
+/* Component: Feature Grid */
+.grid-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Decorative Borders */
+.border-pattern {
+  border: 4px solid transparent;
+  padding: 10px;
+  border-image: repeating-linear-gradient(45deg, var(--color-earth) 0, var(--color-earth) 10px, transparent 10px, transparent 20px) 1;
+}
+
+/* Virtual Keyboard Styles */
+.hg-theme-default {
+  background-color: var(--color-cream);
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid var(--color-earth);
+}
+
+.hg-theme-default .hg-button {
+  background: white;
+  border: 1px solid var(--color-earth-light);
+  color: var(--color-earth);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+}
+
+.hg-theme-default .hg-button:active {
+  background: var(--color-turmeric-light);
+  border-color: var(--color-saffron);
+}
+
+.hg-theme-default .hg-button.hg-functionBtn {
+  background: var(--color-earth-light);
+  color: white;
+}
+
+.hg-theme-default .hg-button.hg-functionBtn:active {
+  background: var(--color-earth);
+}
