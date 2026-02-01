@@ -154,74 +154,9 @@ npm start
 
 ---
 
-## 🌍 Deployment
 
-### Deploy to Vercel (Recommended)
 
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Add environment variables in Vercel dashboard
-5. Deploy!
 
-Your app will be live at: `your-app-name.vercel.app`
-
-### Deploy to AWS Amplify
-
-1. Go to [AWS Amplify Console](https://console.aws.amazon.com/amplify/)
-2. Click "New app" → "Host web app"
-3. Connect your GitHub repository
-4. Add environment variables
-5. Deploy!
-
-Your app will be live at: `your-app.amplifyapp.com`
-
-### Deploy to Netlify
-
-1. Go to [netlify.com](https://netlify.com)
-2. Import your GitHub repository
-3. Add environment variables
-4. Deploy!
-
----
-
-## 📁 Project Structure
-
-```
-Multilingual-Mandi/
-├── public/                          # Static assets & background images
-│   ├── indian_market_painting_*.png # Home page background
-│   ├── flower.png                   # Negotiation page background
-│   ├── indian_veg_pushcart_*.png   # Price Discovery background
-│   └── ...
-├── src/
-│   ├── app/
-│   │   ├── api/                    # API routes
-│   │   │   ├── negotiation/        # Negotiation AI endpoint
-│   │   │   ├── price-discovery/    # Price discovery endpoint
-│   │   │   └── signboard-translate/# OCR & translation endpoint
-│   │   ├── features/               # Feature pages
-│   │   │   ├── calculator/         # Smart calculator
-│   │   │   ├── camera/             # Signboard translator
-│   │   │   ├── negotiation/        # Negotiation assistant
-│   │   │   ├── price-discovery/    # Price discovery
-│   │   │   ├── speak-with-vendor/  # Real-time translation
-│   │   │   └── vendor-rating/      # Vendor rating system
-│   │   ├── globals.css             # Global styles
-│   │   ├── layout.js               # Root layout
-│   │   └── page.js                 # Home page
-│   └── lib/
-│       ├── aws-services.js         # AWS service wrappers
-│       └── language-context.js     # Language state management
-├── .env.local                      # Environment variables (not in repo)
-├── .gitignore
-├── amplify.yml                     # AWS Amplify config
-├── next.config.ts                  # Next.js configuration
-├── package.json
-└── README.md
-```
-
----
 
 ## 🎨 Design Features
 
@@ -251,40 +186,6 @@ Uses AWS Translate API to convert text between 6 Indian languages instantly.
 - AWS Rekognition extracts text from images
 - Automatic language detection using Unicode ranges
 - AWS Translate converts to user's language
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
-
-## 👥 Author
-
-**Deepika Sidda**
-- GitHub: [@DeepikaSidda](https://github.com/DeepikaSidda)
-
----
-
-## 🙏 Acknowledgments
-
-- AWS for AI/ML services
-- data.gov.in for Agmarknet API
-- Next.js team for the amazing framework
-- Indian market vendors for inspiration
-
----
-
-## 📞 Support
-
-For issues or questions, please open an issue on GitHub or contact the maintainer.
 
 ---
 
