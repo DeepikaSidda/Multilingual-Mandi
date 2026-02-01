@@ -95,7 +95,7 @@ A Next.js-powered multilingual marketplace application designed to bridge langua
   - `polly:SynthesizeSpeech`
   - `rekognition:DetectText`
   - `bedrock:InvokeModel`
-
+---
 ## 🌐 Supported Languages
 
 - 🇬🇧 English
@@ -125,21 +125,6 @@ Language selection persists across all pages using localStorage.
   - react-simple-keyboard (virtual keyboards)
   - @aws-sdk/client-* (AWS service clients)
 
----
-
-## 📋 Prerequisites
-
-Before running this app, ensure you have:
-
-1. **Node.js** (v18 or higher)
-2. **npm** or **yarn**
-3. **AWS Account** with the following services enabled:
-   - AWS Translate
-   - AWS Polly
-   - AWS Rekognition
-   - AWS Bedrock (with Titan models)
-4. **AWS Credentials** (Access Key ID & Secret Access Key)
-5. **Agmarknet API Key** from data.gov.in
 
 ---
 
