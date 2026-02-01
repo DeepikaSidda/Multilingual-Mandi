@@ -24,7 +24,7 @@ export default function Calculator() {
         document.body.style.backgroundAttachment = "fixed";
         document.body.style.backgroundPosition = "center";
         return () => {
-            document.body.style.backgroundImage = "url('/bg-market.png')";
+            document.body.style.backgroundImage = "url('/indian_market_painting_1769918395003.png')";
         };
     }, []);
 
