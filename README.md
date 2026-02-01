@@ -58,6 +58,43 @@ A Next.js-powered multilingual marketplace application designed to bridge langua
 - See vendor's preferred language and items sold
 
 ---
+## ☁️ AWS Services Used
+
+### 1. **AWS Translate**
+- **Purpose**: Real-time multilingual text translation
+- **Used in**: All 6 features
+- **Languages Supported**: English ↔ Hindi ↔ Telugu ↔ Tamil ↔ Kannada ↔ Malayalam
+- **SDK Package**: `@aws-sdk/client-translate`
+
+### 2. **AWS Polly**
+- **Purpose**: Text-to-speech conversion (voice output)
+- **Used in**: All features with audio output
+- **Voice**: Aditi (Hindi/English voice with fallback for regional languages)
+- **SDK Package**: `@aws-sdk/client-polly`
+- **Output Format**: MP3
+
+### 3. **AWS Rekognition**
+- **Purpose**: Optical Character Recognition (OCR)
+- **Used in**: Signboard Translator feature
+- **SDK Package**: `@aws-sdk/client-rekognition`
+- **API Used**: DetectText
+
+### 4. **AWS Bedrock**
+- **Purpose**: AI-powered text generation using foundation models
+- **Used in**: Price Discovery & Negotiation Assistant
+- **SDK Package**: `@aws-sdk/client-bedrock-runtime`
+- **Models Used**:
+  - **amazon.titan-text-lite-v1**: AI price estimation when real data unavailable
+  - **amazon.titan-text-premier-v1:0**: Generating negotiation advice and sentences
+
+### AWS Configuration
+- **Region**: `ap-south-1` (Asia Pacific - Mumbai)
+- **Authentication**: IAM credentials (Access Key ID & Secret Access Key)
+- **Required Permissions**:
+  - `translate:TranslateText`
+  - `polly:SynthesizeSpeech`
+  - `rekognition:DetectText`
+  - `bedrock:InvokeModel`
 
 ## 🌐 Supported Languages
 
