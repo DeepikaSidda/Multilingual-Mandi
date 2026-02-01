@@ -4,7 +4,7 @@
 
 A Next.js-powered multilingual marketplace application designed to bridge language barriers in Indian markets. Built with AWS AI services to provide real-time translation, price discovery, negotiation assistance, and more.
 
-![Multilingual Mandi](public/indian_market_painting_1769918395003.png)
+![Multilingual Mandi](public/poster.jpeg)
 
 ---
 
